@@ -1,0 +1,134 @@
+/* 1. Reset Global: Limpa as bobeiras que o navegador coloca por padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+}
+/* 6. Fundo do site inteiro (Metade Cinza, Metade Branco) */
+/* 6. Fundo do site inteiro (Gradiente Suave Vertical com Pontos) */
+body {
+    /* Aqui criamos duas camadas de fundo:
+       Camada 1 (Cima): O gradiente suave vertical (do mais claro para o mais escuro)
+       Camada 2 (Baixo): Um padrão pontilhado repetido sobreposto.
+    */
+    background-image: 
+        linear-gradient(to bottom, #f0f0f0 0%, #e0e0e0 100%), /* Gradiente de cinzas suaves */
+        radial-gradient(#d3d3d3 10%, transparent 11%);     /* Padrão pontilhado */
+    
+    /* Define o tamanho e a repetição do padrão pontilhado */
+    background-size: 
+        100% 100%, /* O gradiente cobre a tela toda */
+        10px 10px; /* Os pontos são repetidos em um quadrado de 10x10 pixels */
+    
+    background-position: center ; /* Alinha o gradiente no centro */
+    
+    min-height: 100vh; /* Garante que cubra a tela toda */
+}
+
+/* 2. Barra do Menu (Fundo Branco Limpo) */
+#Buttom {
+    background-color: #ffffff; /* Fundo totalmente branco */
+    padding: 20px 40px;        /* Espaçamento para dar respiro ao menu */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra bem sutil embaixo da barra */
+    border-radius: 15px;
+}
+
+
+/* 3. Organização da Lista (Espalhando os botões pelas pontas) */
+#Buttom nav ul {
+    list-style: none; /* Tira as bolinhas */
+    display: flex;    /* Alinha os botões em linha */
+    
+    justify-content: space-between; /* MÁGICA AQUI: Joga um pra esquerda, um pro meio e um pra direita */
+}
+/* Ajuste para limpar os links do menu */
+#Buttom nav ul li a {
+    text-decoration: none; /* ESSA LINHA AQUI: Remove o risco sublinhado do link */
+    color: inherit;        /* Faz o link herdar a cor do botão, sem ficar azul padrão */
+}
+
+/* 4. Estilo dos Botões (Branco com detalhes em Azul sutil) */
+#Buttom nav ul li button {
+    background-color: #ffffff; /* Fundo branco */
+    color: #4a5568;            /* Cor do texto (um cinza escuro elegante, melhor que o pretão) */
+    border: 1px solid #e2e8f0; /* Borda cinza bem clarinha */
+    padding: 10px 22px;        /* Tamanho interno do botão */
+    border-radius: 6px;        /* Canto levemente arredondado (estilo moderno) */
+    font-size: 15px;
+    font-weight: 500;          /* Deixa a letra levemente mais grossa */
+    cursor: pointer;
+    
+    /* ANIMAÇÃO: Tudo que mudar no botão vai levar 0.3 segundos de forma suave */
+    transition: all 0.3s ease; 
+}
+
+/* 5. EFEITO HOVER: Quando o mouse passa por cima (O efeito Azul) */
+#Buttom nav ul li button:hover {
+    color: #0066cc;            /* O texto muda para um azul bonito */
+    border-color: #0066cc;     /* A borda fica azul */
+    background-color: #f0f7ff; /* Um fundo azul bem clarinho, quase imperceptível */
+    
+    /* Efeito de levitação: joga o botão 2px para cima e bota uma sombrinha azul atrás */
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15); 
+}
+
+/* Estilização da seção Sobre Mim */
+#sobre-mim {
+    max-width: 650px; /* Mantém o alinhamento e o limite de largura igual ao início */
+    margin-top: 40px; /* Dá um espaço bacana caso essa seção fique abaixo de outra */
+    margin-bottom: 25px;
+}
+
+/* O Subtítulo da seção */
+#sobre-mim h2 {
+    font-size: 1.8rem; /* Um pouco menor que o h1 principal, mantendo a hierarquia profissional */
+    color: #1a1a1a; /* O mesmo preto suave */
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+/* O Parágrafo da seção */
+#sobre-mim p {
+    font-size: 1.1rem; /* Mesma leitura confortável */
+    color: #555555; /* O mesmo cinza escuro para descansar a vista */
+    line-height: 1.6; /* Espaçamento idêntico para manter a harmonia */
+    margin-top: 0;
+}
+
+/* 11. Estilização da Seção Sobre Mim */
+#sobre-mim {
+    max-width: 750px;       /* Limita a largura do texto para a leitura ficar confortável */
+    margin: 60px auto;      /* Centraliza o bloco na tela e dá espaço do menu */
+    padding: 40px;          /* Espaçamento interno da caixa */
+    background-color: #ffffff; /* Fundo branco para destacar o texto do fundo pontilhado */
+    border-radius: 12px;    /* Cantos suavemente arredondados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Sombra bem sutil e elegante */
+}
+
+#sobre-mim h2 {
+    font-size: 32px;
+    color: #1a202c;         /* O mesmo preto grafite moderno do início */
+    margin-bottom: 25px;    /* Espaço até começar o texto */
+    position: relative;
+}
+
+/* Um detalhe visual: uma linha azul charmosa embaixo do título */
+#sobre-mim h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #0066cc; /* O nosso azul padrão */
+    border-radius: 2px;
+    margin-top: 8px;
+}
+
+#sobre-mim p {
+    font-size: 17px;
+    color: #4a5568;         /* Cinza escuro para não cansar as vistas */
+    line-height: 1.8;       /* Espaçamento perfeito entre as linhas */
+    text-align: justify;    /* Alinha o texto perfeitamente dos dois lados */
+}
