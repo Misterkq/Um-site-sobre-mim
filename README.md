@@ -7,4 +7,4 @@ Site arrumado!
 
 link  do site : https://misterkq.github.io/Um-site-sobre-mim/
 
-Ainda não adicionei meus código, mais talvez em breve adicionarei
+Ainda não adicionei meus código, mais talvez em breve adicionarei, e também pra celular não funciona a layout fica bugada 
